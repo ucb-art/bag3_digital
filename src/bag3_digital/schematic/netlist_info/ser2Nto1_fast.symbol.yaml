@@ -7,32 +7,19 @@ bbox:
   - 304
   - 264
 terminals:
-  VDD:
+  clk_div_buf:
     obj:
       - 0
       - layer: 229
         purpose: 4294967295
         net: ""
         bbox:
-          - 156
-          - 256
-          - 164
-          - 264
-    stype: 1
-    ttype: 2
-  VSS:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 156
-          - -4
-          - 164
-          - 4
-    stype: 2
-    ttype: 2
+          - 296
+          - 96
+          - 304
+          - 104
+    stype: 0
+    ttype: 1
   clk:
     obj:
       - 0
@@ -59,19 +46,6 @@ terminals:
           - 104
     stype: 0
     ttype: 0
-  clk_div_buf:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 296
-          - 96
-          - 304
-          - 104
-    stype: 0
-    ttype: 1
   clkb:
     obj:
       - 0
@@ -98,19 +72,6 @@ terminals:
           - 184
     stype: 0
     ttype: 0
-  dout:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 296
-          - 176
-          - 304
-          - 184
-    stype: 0
-    ttype: 1
   rst:
     obj:
       - 0
@@ -124,6 +85,45 @@ terminals:
           - 84
     stype: 0
     ttype: 0
+  VSS:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 156
+          - -4
+          - 164
+          - 4
+    stype: 2
+    ttype: 2
+  VDD:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 156
+          - 256
+          - 164
+          - 264
+    stype: 1
+    ttype: 2
+  dout:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 296
+          - 176
+          - 304
+          - 184
+    stype: 0
+    ttype: 1
 shapes:
   -
     - 5
@@ -434,22 +434,22 @@ shapes:
 instances:
   {}
 props:
-  interfaceLastChanged:
-    - 4
-    - time_val: 1628645364
-  partName:
-    - 3
-    - ser2Nto1_fast
   pin#:
     - 0
     - 17
+  interfaceLastChanged:
+    - 4
+    - time_val: 1628645364
+  vendorName:
+    - 3
+    - ""
+  partName:
+    - 3
+    - ser2Nto1_fast
   portOrder:
     - 5
     - name: ILList
       bin_val: ("clk_div_buf" "dout" "VDD" "VSS" "clk" "clk_div" "clkb" "din" "rst")
-  vendorName:
-    - 3
-    - ""
 app_defs:
   _dbLastSavedCounter:
     - 0
