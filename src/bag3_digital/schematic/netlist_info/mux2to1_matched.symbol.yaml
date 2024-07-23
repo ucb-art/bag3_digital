@@ -20,6 +20,19 @@ terminals:
           - 164
     stype: 1
     ttype: 2
+  selb:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 116
+          - 4
+          - 124
+    stype: 0
+    ttype: 0
   VSS:
     obj:
       - 0
@@ -33,6 +46,19 @@ terminals:
           - 4
     stype: 2
     ttype: 2
+  sel:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 36
+          - 4
+          - 44
+    stype: 0
+    ttype: 0
   in<1:0>:
     obj:
       - 0
@@ -59,32 +85,6 @@ terminals:
           - 84
     stype: 0
     ttype: 1
-  sel:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 36
-          - 4
-          - 44
-    stype: 0
-    ttype: 0
-  selb:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 116
-          - 4
-          - 124
-    stype: 0
-    ttype: 0
 shapes:
   -
     - 7
@@ -335,15 +335,6 @@ props:
   instNamePrefix:
     - 3
     - X
-  interfaceLastChanged:
-    - 4
-    - time_val: 1627853673
-  partName:
-    - 3
-    - mux2to1_matched
-  pin#:
-    - 0
-    - 12
   portOrder:
     - 5
     - name: ILList
@@ -351,6 +342,15 @@ props:
   vendorName:
     - 3
     - ""
+  pin#:
+    - 0
+    - 12
+  partName:
+    - 3
+    - mux2to1_matched
+  interfaceLastChanged:
+    - 4
+    - time_val: 1627853673
 app_defs:
   _dbLastSavedCounter:
     - 0
@@ -361,6 +361,3 @@ app_defs:
   cdbRevision:
     - 0
     - 227612
-  cdnSPDesignMajorVersion:
-    - 0
-    - 2

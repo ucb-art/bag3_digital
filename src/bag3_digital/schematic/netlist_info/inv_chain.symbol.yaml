@@ -354,32 +354,29 @@ props:
   instNamePrefix:
     - 3
     - X
-  interfaceLastChanged:
-    - 4
-    - time_val: 1615599023
-  partName:
+  vendorName:
     - 3
-    - inv_chain
-  pin#:
-    - 0
-    - 7
+    - ""
   portOrder:
     - 5
     - name: ILList
       bin_val: ("out" "outb" "VDD" "VSS" "in")
-  vendorName:
+  pin#:
+    - 0
+    - 7
+  partName:
     - 3
-    - ""
+    - inv_chain
+  interfaceLastChanged:
+    - 4
+    - time_val: 1615599023
 app_defs:
   _dbLastSavedCounter:
     - 0
-    - 69
+    - 71
   _dbvCvTimeStamp:
     - 0
-    - 69
+    - 71
   cdbRevision:
     - 0
     - 227612
-  cdnSPDesignMajorVersion:
-    - 0
-    - 2

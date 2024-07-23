@@ -7,123 +7,6 @@ bbox:
   - 401
   - 231
 terminals:
-  VDD:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: iopin
-          view_name: symbolr
-          xform:
-            - -310
-            - 200
-            - R0
-          bbox:
-            - -371
-            - 174
-            - -300
-            - 210
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -335
-            - 200
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 1
-    ttype: 2
-  VSS:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: iopin
-          view_name: symbolr
-          xform:
-            - -310
-            - 180
-            - R0
-          bbox:
-            - -371
-            - 154
-            - -300
-            - 190
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -335
-            - 180
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 2
-    ttype: 2
-  en:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: ipin
-          view_name: symbol
-          xform:
-            - -300
-            - 120
-            - R0
-          bbox:
-            - -357
-            - 94
-            - -300
-            - 130
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -330
-            - 120
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 0
   enb:
     obj:
       - 1
@@ -152,6 +35,45 @@ terminals:
           origin:
             - -330
             - 100
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 0
+  en:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: ipin
+          view_name: symbol
+          xform:
+            - -300
+            - 120
+            - R0
+          bbox:
+            - -357
+            - 94
+            - -300
+            - 130
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -330
+            - 120
           alignment: 7
           orient: R0
           font: 5
@@ -241,6 +163,84 @@ terminals:
           format: 1
     stype: 0
     ttype: 1
+  VSS:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: iopin
+          view_name: symbolr
+          xform:
+            - -310
+            - 180
+            - R0
+          bbox:
+            - -371
+            - 154
+            - -300
+            - 190
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -335
+            - 180
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 2
+    ttype: 2
+  VDD:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: iopin
+          view_name: symbolr
+          xform:
+            - -310
+            - 200
+            - R0
+          bbox:
+            - -371
+            - 174
+            - -300
+            - 210
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -335
+            - 200
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 1
+    ttype: 2
 shapes:
   -
     - 5
@@ -579,6 +579,32 @@ shapes:
       drafting: true
       text: VDD
 instances:
+  XR:
+    lib_name: BAG_prim
+    cell_name: pmos4_standard
+    view_name: symbol
+    xform:
+      - 270
+      - 120
+      - R0
+    bbox:
+      - 202
+      - 33
+      - 401
+      - 207
+    connections:
+      S: VDD
+      D: out
+      B: VDD
+      G: VDD
+    params:
+      l:
+        - 3
+        - 18n
+      w:
+        - 3
+        - 4
+    is_primitive: true
   XN:
     lib_name: xbase
     cell_name: nmos4_stack
@@ -593,10 +619,10 @@ instances:
       - 198
       - -19
     connections:
-      b: VSS
-      d: out
-      g<1:0>: en,in
       s: VSS
+      g<1:0>: en,in
+      d: out
+      b: VSS
     params:
       {}
     is_primitive: false
@@ -614,64 +640,38 @@ instances:
       - 198
       - 231
     connections:
-      b: VDD
-      d: out
-      g<1:0>: enb,in
       s: VDD
+      g<1:0>: enb,in
+      d: out
+      b: VDD
     params:
       {}
     is_primitive: false
-  XR:
-    lib_name: BAG_prim
-    cell_name: pmos4_standard
-    view_name: symbol
-    xform:
-      - 270
-      - 120
-      - R0
-    bbox:
-      - 202
-      - 33
-      - 401
-      - 207
-    connections:
-      B: VDD
-      D: out
-      G: VDD
-      S: VDD
-    params:
-      l:
-        - 3
-        - 18n
-      w:
-        - 3
-        - 4
-    is_primitive: true
 props:
-  connectivityLastUpdated:
-    - 0
-    - 953
-  instance#:
-    - 0
-    - 1
-  lastSchematicExtraction:
-    - 4
-    - time_val: 1615246633
-  net#:
-    - 0
-    - 0
   pin#:
     - 0
     - 6
+  instance#:
+    - 0
+    - 1
   schGeometryLastUpdated:
     - 0
     - 953
   schGeometryVersion:
     - 3
     - sch.ds.gm.1.4
+  lastSchematicExtraction:
+    - 4
+    - time_val: 1615246633
+  connectivityLastUpdated:
+    - 0
+    - 953
   schXtrVersion:
     - 3
     - sch.10.0
+  net#:
+    - 0
+    - 0
 app_defs:
   _dbLastSavedCounter:
     - 0

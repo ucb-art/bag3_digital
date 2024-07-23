@@ -3,7 +3,7 @@ cell_name: passgate
 view_name: schematic
 bbox:
   - -321
-  - -205
+  - -204
   - 132
   - 150
 terminals:
@@ -124,6 +124,45 @@ terminals:
           format: 1
     stype: 0
     ttype: 1
+  s:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: ipin
+          view_name: symbol
+          xform:
+            - -260
+            - 60
+            - R0
+          bbox:
+            - -317
+            - 34
+            - -260
+            - 70
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -290
+            - 60
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 0
   en:
     obj:
       - 1
@@ -191,45 +230,6 @@ terminals:
           origin:
             - -290
             - 20
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 0
-  s:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: ipin
-          view_name: symbol
-          xform:
-            - -260
-            - 60
-            - R0
-          bbox:
-            - -317
-            - 34
-            - -260
-            - 70
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -290
-            - 60
           alignment: 7
           orient: R0
           font: 5
@@ -481,18 +481,18 @@ instances:
       - 132
       - -125
     connections:
-      B: VSS
-      D: d
-      G: en
       S: s
+      D: d
+      B: VSS
+      G: en
     params:
       l:
         - 3
         - 18n
-      nf:
+      w:
         - 3
         - 4
-      w:
+      nf:
         - 3
         - 4
     is_primitive: true
@@ -510,18 +510,18 @@ instances:
       - 131
       - 127
     connections:
-      B: VDD
-      D: d
-      G: enb
       S: s
+      D: d
+      B: VDD
+      G: enb
     params:
       l:
         - 3
         - 18n
-      nf:
+      w:
         - 3
         - 4
-      w:
+      nf:
         - 3
         - 4
     is_primitive: true
@@ -529,24 +529,24 @@ props:
   connectivityLastUpdated:
     - 0
     - 1927
-  lastSchematicExtraction:
-    - 4
-    - time_val: 1616016760
-  net#:
-    - 0
-    - 0
-  pin#:
-    - 0
-    - 13
-  schGeometryLastUpdated:
-    - 0
-    - 1927
-  schGeometryVersion:
-    - 3
-    - sch.ds.gm.1.4
   schXtrVersion:
     - 3
     - sch.10.0
+  schGeometryVersion:
+    - 3
+    - sch.ds.gm.1.4
+  schGeometryLastUpdated:
+    - 0
+    - 1927
+  pin#:
+    - 0
+    - 13
+  net#:
+    - 0
+    - 0
+  lastSchematicExtraction:
+    - 4
+    - time_val: 1616016760
 app_defs:
   _dbLastSavedCounter:
     - 0
@@ -557,6 +557,3 @@ app_defs:
   cdbRevision:
     - 0
     - 227612
-  cdnSPDesignMajorVersion:
-    - 0
-    - 2

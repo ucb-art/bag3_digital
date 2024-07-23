@@ -435,18 +435,18 @@ props:
   instNamePrefix:
     - 3
     - X
-  interfaceLastChanged:
-    - 4
-    - time_val: 1623107229
-  partName:
-    - 3
-    - flop_strongarm
-  pin#:
-    - 0
-    - 17
   vendorName:
     - 3
     - ""
+  pin#:
+    - 0
+    - 17
+  partName:
+    - 3
+    - flop_strongarm
+  interfaceLastChanged:
+    - 4
+    - time_val: 1623107229
 app_defs:
   _dbLastSavedCounter:
     - 0
@@ -457,6 +457,3 @@ app_defs:
   cdbRevision:
     - 0
     - 227612
-  cdnSPDesignMajorVersion:
-    - 0
-    - 2

@@ -3,7 +3,7 @@ cell_name: inv_chain
 view_name: schematic
 bbox:
   - -391
-  - 75
+  - 76
   - 62
   - 290
 terminals:
@@ -46,6 +46,45 @@ terminals:
           format: 1
     stype: 1
     ttype: 2
+  out:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: opin
+          view_name: symbol
+          xform:
+            - -280
+            - 190
+            - R0
+          bbox:
+            - -280
+            - 164
+            - -223
+            - 200
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -255
+            - 190
+          alignment: 1
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 1
   VSS:
     obj:
       - 1
@@ -124,45 +163,6 @@ terminals:
           format: 1
     stype: 0
     ttype: 0
-  out:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: opin
-          view_name: symbol
-          xform:
-            - -280
-            - 190
-            - R0
-          bbox:
-            - -280
-            - 164
-            - -223
-            - 200
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -255
-            - 190
-          alignment: 1
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 1
   outb:
     obj:
       - 1
@@ -330,10 +330,10 @@ instances:
       - 44
       - 244
     connections:
-      VDD: VDD
-      VSS: VSS
-      in: in
       out: outb
+      in: in
+      VSS: VSS
+      VDD: VDD
     params:
       {}
     is_primitive: false
@@ -341,27 +341,27 @@ props:
   connectivityLastUpdated:
     - 0
     - 1061
-  instance#:
-    - 0
-    - 1
-  lastSchematicExtraction:
-    - 4
-    - time_val: 1615600052
-  net#:
-    - 0
-    - 0
-  pin#:
-    - 0
-    - 18
-  schGeometryLastUpdated:
-    - 0
-    - 1061
-  schGeometryVersion:
-    - 3
-    - sch.ds.gm.1.4
   schXtrVersion:
     - 3
     - sch.10.0
+  schGeometryVersion:
+    - 3
+    - sch.ds.gm.1.4
+  schGeometryLastUpdated:
+    - 0
+    - 1061
+  pin#:
+    - 0
+    - 18
+  net#:
+    - 0
+    - 0
+  lastSchematicExtraction:
+    - 4
+    - time_val: 1615600052
+  instance#:
+    - 0
+    - 1
 app_defs:
   _dbLastSavedCounter:
     - 0
@@ -372,6 +372,3 @@ app_defs:
   cdbRevision:
     - 0
     - 227612
-  cdnSPDesignMajorVersion:
-    - 0
-    - 2

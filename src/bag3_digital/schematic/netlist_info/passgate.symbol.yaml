@@ -390,22 +390,22 @@ props:
   instNamePrefix:
     - 3
     - X
-  interfaceLastChanged:
-    - 4
-    - time_val: 1615599123
-  partName:
+  vendorName:
     - 3
-    - passgate
-  pin#:
-    - 0
-    - 6
+    - ""
   portOrder:
     - 5
     - name: ILList
       bin_val: ("d" "VDD" "VSS" "en" "enb" "s")
-  vendorName:
+  pin#:
+    - 0
+    - 6
+  partName:
     - 3
-    - ""
+    - passgate
+  interfaceLastChanged:
+    - 4
+    - time_val: 1615599123
 app_defs:
   _dbLastSavedCounter:
     - 0
@@ -416,6 +416,3 @@ app_defs:
   cdbRevision:
     - 0
     - 227612
-  cdnSPDesignMajorVersion:
-    - 0
-    - 2

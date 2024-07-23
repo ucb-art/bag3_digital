@@ -724,6 +724,8 @@ class DesArrayBinaryTree(MOSBase):
                 for port_name in inst.port_names_iter():
                     if port_name.startswith(('clk_div_', 'VDD', 'VSS')) and not port_name.startswith('clk_div_buf'):
                         continue
+                    if port_name.endswith('!'):
+                        continue
                     port_base, port_range = parse_cdba_name(port_name)
                     port_sfx = port_name[len(port_base):]
                     if port_base == 'din':
