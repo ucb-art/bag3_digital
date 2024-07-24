@@ -432,6 +432,7 @@ class FlopCore(MOSBase):
             ncol = cur_col + m_ncol + s_ncol + blk_sp + inv_master.num_cols + m_inv_sp
             scol = cur_col + m_ncol + inv_master.num_cols + blk_sp + m_inv_sp + extra_sp
             b_inst = self.add_tile(inv_master, 0, cur_col + m_ncol + m_inv_sp)
+            inst_list.append(b_inst)
             self._cntr_col_clk = scol - (blk_sp + extra_sp) // 2
         else:
             ncol = cur_col + m_ncol + s_ncol + blk_sp
