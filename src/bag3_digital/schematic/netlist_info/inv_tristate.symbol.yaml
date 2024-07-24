@@ -7,33 +7,7 @@ bbox:
   - 204
   - 164
 terminals:
-  VDD:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 96
-          - 156
-          - 104
-          - 164
-    stype: 1
-    ttype: 2
-  VSS:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 96
-          - -4
-          - 104
-          - 4
-    stype: 2
-    ttype: 2
-  en:
+  in:
     obj:
       - 0
       - layer: 229
@@ -41,9 +15,9 @@ terminals:
         net: ""
         bbox:
           - -4
-          - 56
+          - 76
           - 4
-          - 64
+          - 84
     stype: 0
     ttype: 0
   enb:
@@ -59,7 +33,7 @@ terminals:
           - 104
     stype: 0
     ttype: 0
-  in:
+  en:
     obj:
       - 0
       - layer: 229
@@ -67,11 +41,37 @@ terminals:
         net: ""
         bbox:
           - -4
-          - 76
+          - 56
           - 4
-          - 84
+          - 64
     stype: 0
     ttype: 0
+  VSS:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 96
+          - -4
+          - 104
+          - 4
+    stype: 2
+    ttype: 2
+  VDD:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 96
+          - 156
+          - 104
+          - 164
+    stype: 1
+    ttype: 2
   out:
     obj:
       - 0
@@ -363,22 +363,22 @@ shapes:
 instances:
   {}
 props:
-  interfaceLastChanged:
-    - 4
-    - time_val: 1614060817
-  partName:
-    - 3
-    - inv_tristate
   pin#:
     - 0
     - 12
+  interfaceLastChanged:
+    - 4
+    - time_val: 1614060817
+  vendorName:
+    - 3
+    - ""
+  partName:
+    - 3
+    - inv_tristate
   portOrder:
     - 5
     - name: ILList
       bin_val: ("out" "VDD" "VSS" "en" "enb" "in")
-  vendorName:
-    - 3
-    - ""
 app_defs:
   _dbLastSavedCounter:
     - 0

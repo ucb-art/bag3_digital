@@ -7,33 +7,7 @@ bbox:
   - 278
   - 224
 terminals:
-  VDD:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 96
-          - 216
-          - 104
-          - 224
-    stype: 1
-    ttype: 2
-  VSS:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 96
-          - -4
-          - 104
-          - 4
-    stype: 2
-    ttype: 2
-  clk:
+  in:
     obj:
       - 0
       - layer: 229
@@ -41,9 +15,9 @@ terminals:
         net: ""
         bbox:
           - -4
-          - 96
+          - 136
           - 4
-          - 104
+          - 144
     stype: 0
     ttype: 0
   clkb:
@@ -59,7 +33,7 @@ terminals:
           - 84
     stype: 0
     ttype: 0
-  in:
+  clk:
     obj:
       - 0
       - layer: 229
@@ -67,11 +41,37 @@ terminals:
         net: ""
         bbox:
           - -4
-          - 136
+          - 96
           - 4
-          - 144
+          - 104
     stype: 0
     ttype: 0
+  VSS:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 96
+          - -4
+          - 104
+          - 4
+    stype: 2
+    ttype: 2
+  VDD:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 96
+          - 216
+          - 104
+          - 224
+    stype: 1
+    ttype: 2
   out:
     obj:
       - 0
@@ -348,22 +348,22 @@ shapes:
 instances:
   {}
 props:
-  interfaceLastChanged:
-    - 4
-    - time_val: 1614063254
-  partName:
-    - 3
-    - latch
   pin#:
     - 0
     - 14
+  interfaceLastChanged:
+    - 4
+    - time_val: 1614063254
+  vendorName:
+    - 3
+    - ""
+  partName:
+    - 3
+    - latch
   portOrder:
     - 5
     - name: ILList
       bin_val: ("out" "VDD" "VSS" "clk" "clkb" "in")
-  vendorName:
-    - 3
-    - ""
 app_defs:
   _dbLastSavedCounter:
     - 0

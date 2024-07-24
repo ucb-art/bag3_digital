@@ -7,84 +7,6 @@ bbox:
   - 304
   - 244
 terminals:
-  VDD:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 136
-          - 236
-          - 144
-          - 244
-    stype: 1
-    ttype: 2
-  VSS:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 136
-          - -4
-          - 144
-          - 4
-    stype: 2
-    ttype: 2
-  clk:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 136
-          - 4
-          - 144
-    stype: 0
-    ttype: 0
-  clk_buf:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 296
-          - 136
-          - 304
-          - 144
-    stype: 0
-    ttype: 1
-  clk_div:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 96
-          - 4
-          - 104
-    stype: 0
-    ttype: 0
-  clk_div_buf:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 296
-          - 96
-          - 304
-          - 104
-    stype: 0
-    ttype: 1
   clkb:
     obj:
       - 0
@@ -98,19 +20,32 @@ terminals:
           - 124
     stype: 0
     ttype: 0
-  clkb_buf:
+  clk:
     obj:
       - 0
       - layer: 229
         purpose: 4294967295
         net: ""
         bbox:
-          - 296
-          - 116
-          - 304
-          - 124
+          - -4
+          - 136
+          - 4
+          - 144
     stype: 0
-    ttype: 1
+    ttype: 0
+  clk_div:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 96
+          - 4
+          - 104
+    stype: 0
+    ttype: 0
   din:
     obj:
       - 0
@@ -124,19 +59,6 @@ terminals:
           - 164
     stype: 0
     ttype: 0
-  dout:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 296
-          - 156
-          - 304
-          - 164
-    stype: 0
-    ttype: 1
   rst:
     obj:
       - 0
@@ -150,6 +72,84 @@ terminals:
           - 84
     stype: 0
     ttype: 0
+  VSS:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 136
+          - -4
+          - 144
+          - 4
+    stype: 2
+    ttype: 2
+  VDD:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 136
+          - 236
+          - 144
+          - 244
+    stype: 1
+    ttype: 2
+  clk_div_buf:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 296
+          - 96
+          - 304
+          - 104
+    stype: 0
+    ttype: 1
+  dout:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 296
+          - 156
+          - 304
+          - 164
+    stype: 0
+    ttype: 1
+  clk_buf:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 296
+          - 136
+          - 304
+          - 144
+    stype: 0
+    ttype: 1
+  clkb_buf:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 296
+          - 116
+          - 304
+          - 124
+    stype: 0
+    ttype: 1
 shapes:
   -
     - 5
@@ -516,22 +516,22 @@ shapes:
 instances:
   {}
 props:
-  interfaceLastChanged:
-    - 4
-    - time_val: 1646099343
-  partName:
-    - 3
-    - serNto1_fast
   pin#:
     - 0
     - 21
+  interfaceLastChanged:
+    - 4
+    - time_val: 1646099343
+  vendorName:
+    - 3
+    - ""
+  partName:
+    - 3
+    - serNto1_fast
   portOrder:
     - 5
     - name: ILList
       bin_val: ("clk_buf" "clk_div_buf" "clkb_buf" "dout" "VDD" "VSS" "clk" "clk_div" "clkb" "din" "rst")
-  vendorName:
-    - 3
-    - ""
 app_defs:
   _dbLastSavedCounter:
     - 0

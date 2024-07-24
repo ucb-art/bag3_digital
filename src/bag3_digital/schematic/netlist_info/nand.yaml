@@ -2,89 +2,11 @@ lib_name: bag3_digital
 cell_name: nand
 view_name: schematic
 bbox:
-  - -376
-  - -255
+  - -389
+  - -254
   - 218
   - 221
 terminals:
-  VDD:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: iopin
-          view_name: symbolr
-          xform:
-            - -300
-            - 110
-            - R0
-          bbox:
-            - -361
-            - 84
-            - -290
-            - 120
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -325
-            - 110
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 1
-    ttype: 2
-  VSS:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: iopin
-          view_name: symbolr
-          xform:
-            - -300
-            - 90
-            - R0
-          bbox:
-            - -361
-            - 64
-            - -290
-            - 100
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -325
-            - 90
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 2
-    ttype: 2
   in<1:0>:
     obj:
       - 1
@@ -163,6 +85,84 @@ terminals:
           format: 1
     stype: 0
     ttype: 1
+  VSS:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: iopin
+          view_name: symbolr
+          xform:
+            - -300
+            - 90
+            - R0
+          bbox:
+            - -361
+            - 64
+            - -290
+            - 100
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -325
+            - 90
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 2
+    ttype: 2
+  VDD:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: iopin
+          view_name: symbolr
+          xform:
+            - -300
+            - 110
+            - R0
+          bbox:
+            - -361
+            - 84
+            - -290
+            - 120
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -325
+            - 110
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 1
+    ttype: 2
 shapes:
   -
     - 5
@@ -389,27 +389,6 @@ shapes:
       drafting: true
       text: VDD
 instances:
-  XN:
-    lib_name: xbase
-    cell_name: nmos4_stack
-    view_name: symbol
-    xform:
-      - -100
-      - -250
-      - R0
-    bbox:
-      - -104
-      - -254
-      - 218
-      - -29
-    connections:
-      b: VSS
-      d: out
-      g<1:0>: in<1:0>
-      s: VSS
-    params:
-      {}
-    is_primitive: false
   XP:
     lib_name: xbase
     cell_name: pmos4_stack
@@ -424,42 +403,63 @@ instances:
       - 218
       - 221
     connections:
-      b: VDD
-      d: out
       g<1:0>: in<1:0>
       s: VDD
+      d: out
+      b: VDD
+    params:
+      {}
+    is_primitive: false
+  XN:
+    lib_name: xbase
+    cell_name: nmos4_stack
+    view_name: symbol
+    xform:
+      - -100
+      - -250
+      - R0
+    bbox:
+      - -104
+      - -254
+      - 218
+      - -29
+    connections:
+      g<1:0>: in<1:0>
+      s: VSS
+      d: out
+      b: VSS
     params:
       {}
     is_primitive: false
 props:
-  connectivityLastUpdated:
-    - 0
-    - 1253
-  lastSchematicExtraction:
-    - 4
-    - time_val: 1614060990
-  net#:
-    - 0
-    - 0
   pin#:
     - 0
     - 4
   schGeometryLastUpdated:
     - 0
-    - 1253
+    - 1275
   schGeometryVersion:
     - 3
     - sch.ds.gm.1.4
+  lastSchematicExtraction:
+    - 4
+    - time_val: 1675372209
+  connectivityLastUpdated:
+    - 0
+    - 1275
   schXtrVersion:
     - 3
     - sch.10.0
+  net#:
+    - 0
+    - 0
 app_defs:
   _dbLastSavedCounter:
     - 0
-    - 1253
+    - 1275
   _dbvCvTimeStamp:
     - 0
-    - 1253
+    - 1275
   cdbRevision:
     - 0
     - 227612

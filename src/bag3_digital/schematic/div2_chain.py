@@ -121,7 +121,12 @@ class bag3_digital__div2_chain(Module):
         elif len(inv_clk_div_list) != num_stages - 1:
             raise ValueError(f"inv_clk_div_list does not have length num_stages - 1 = {num_stages - 1}")
         self.array_instance('XDIV', div_name_list)
-        self.array_instance('XBUFDIV', clk_div_buf_name_list)
+        clk_div_buf_name_list_filt = [buf_name for buf_name, buf_params in zip(clk_div_buf_name_list, clk_div_buf_params_list)
+                                      if buf_params]
+        if clk_div_buf_name_list_filt:
+            self.array_instance('XBUFDIV', clk_div_buf_name_list_filt)
+        else:
+            self.remove_instance('XBUFDIV')
 
         if clk_buf_params:
             clk_buf_params = clk_buf_params.copy(append=dict(dual_output=False))
@@ -179,7 +184,6 @@ class bag3_digital__div2_chain(Module):
                 self.reconnect_instance(buf_name, {'in': div_out_net, 'out': clk_div_net, 'outb': clk_divb_net}.items())
                 nets_to_export.update({div_out_net, div_outb_net})
             else:  # no buffer for divided clock
-                self.remove_instance(buf_name)
                 div_conns['clk_div'] = clk_div_net
                 div_conns['clk_divb'] = clk_divb_net
             self.reconnect_instance(div_name, div_conns.items())

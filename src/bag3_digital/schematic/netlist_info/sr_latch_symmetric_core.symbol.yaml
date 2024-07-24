@@ -7,59 +7,7 @@ bbox:
   - 318
   - 291
 terminals:
-  VDD:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 96
-          - 276
-          - 104
-          - 284
-    stype: 1
-    ttype: 2
-  VSS:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 96
-          - -4
-          - 104
-          - 4
-    stype: 2
-    ttype: 2
-  q:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 196
-          - 196
-          - 204
-          - 204
-    stype: 0
-    ttype: 1
-  qb:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 196
-          - 76
-          - 204
-          - 84
-    stype: 0
-    ttype: 1
-  r:
+  sb:
     obj:
       - 0
       - layer: 229
@@ -67,48 +15,9 @@ terminals:
         net: ""
         bbox:
           - -4
-          - 96
+          - 216
           - 4
-          - 104
-    stype: 0
-    ttype: 0
-  rb:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 56
-          - 4
-          - 64
-    stype: 0
-    ttype: 0
-  rsthb:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 256
-          - 4
-          - 264
-    stype: 0
-    ttype: 0
-  rstlb:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 16
-          - 4
-          - 24
+          - 224
     stype: 0
     ttype: 0
   s:
@@ -124,7 +33,7 @@ terminals:
           - 184
     stype: 0
     ttype: 0
-  sb:
+  rstlb:
     obj:
       - 0
       - layer: 229
@@ -132,11 +41,102 @@ terminals:
         net: ""
         bbox:
           - -4
-          - 216
+          - 16
           - 4
-          - 224
+          - 24
     stype: 0
     ttype: 0
+  rsthb:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 256
+          - 4
+          - 264
+    stype: 0
+    ttype: 0
+  rb:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 56
+          - 4
+          - 64
+    stype: 0
+    ttype: 0
+  r:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 96
+          - 4
+          - 104
+    stype: 0
+    ttype: 0
+  VSS:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 96
+          - -4
+          - 104
+          - 4
+    stype: 2
+    ttype: 2
+  VDD:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 96
+          - 276
+          - 104
+          - 284
+    stype: 1
+    ttype: 2
+  qb:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 196
+          - 76
+          - 204
+          - 84
+    stype: 0
+    ttype: 1
+  q:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 196
+          - 196
+          - 204
+          - 204
+    stype: 0
+    ttype: 1
 shapes:
   -
     - 5
@@ -615,22 +615,22 @@ shapes:
 instances:
   {}
 props:
-  interfaceLastChanged:
-    - 4
-    - time_val: 1614483208
-  partName:
-    - 3
-    - sr_latch_symmetric_core
   pin#:
     - 0
     - 20
+  interfaceLastChanged:
+    - 4
+    - time_val: 1614483208
+  vendorName:
+    - 3
+    - ""
+  partName:
+    - 3
+    - sr_latch_symmetric_core
   portOrder:
     - 5
     - name: ILList
       bin_val: ("q" "qb" "VDD" "VSS" "r" "rb" "rsthb" "rstlb" "s" "sb")
-  vendorName:
-    - 3
-    - ""
 app_defs:
   _dbLastSavedCounter:
     - 0

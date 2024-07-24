@@ -7,6 +7,71 @@ bbox:
   - 344
   - 204
 terminals:
+  rst_async:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 36
+          - 4
+          - 44
+    stype: 0
+    ttype: 0
+  din:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 136
+          - 4
+          - 144
+    stype: 0
+    ttype: 0
+  clk:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 56
+          - 4
+          - 64
+    stype: 0
+    ttype: 0
+  rstb_sync:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 336
+          - 136
+          - 344
+          - 144
+    stype: 0
+    ttype: 1
+  rst_sync:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 336
+          - 116
+          - 344
+          - 124
+    stype: 0
+    ttype: 1
   VDD:
     obj:
       - 0
@@ -33,71 +98,6 @@ terminals:
           - 4
     stype: 2
     ttype: 2
-  clk:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 56
-          - 4
-          - 64
-    stype: 0
-    ttype: 0
-  din:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 136
-          - 4
-          - 144
-    stype: 0
-    ttype: 0
-  rst_async:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 36
-          - 4
-          - 44
-    stype: 0
-    ttype: 0
-  rst_sync:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 336
-          - 116
-          - 344
-          - 124
-    stype: 0
-    ttype: 1
-  rstb_sync:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 336
-          - 136
-          - 344
-          - 144
-    stype: 0
-    ttype: 1
 shapes:
   -
     - 7
@@ -490,22 +490,22 @@ shapes:
 instances:
   {}
 props:
-  interfaceLastChanged:
-    - 4
-    - time_val: 1628012032
-  partName:
-    - 3
-    - reset_sync
   pin#:
     - 0
     - 7
+  interfaceLastChanged:
+    - 4
+    - time_val: 1628012032
+  vendorName:
+    - 3
+    - ""
+  partName:
+    - 3
+    - reset_sync
   portOrder:
     - 5
     - name: ILList
       bin_val: ("rst_sync" "rstb_sync" "VDD" "VSS" "clk" "din" "rst_async")
-  vendorName:
-    - 3
-    - ""
 app_defs:
   _dbLastSavedCounter:
     - 0

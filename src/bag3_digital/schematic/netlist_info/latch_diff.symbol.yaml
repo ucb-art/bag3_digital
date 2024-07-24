@@ -7,6 +7,84 @@ bbox:
   - 364
   - 224
 terminals:
+  inb:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 156
+          - 4
+          - 164
+    stype: 0
+    ttype: 0
+  in:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 56
+          - 4
+          - 64
+    stype: 0
+    ttype: 0
+  clkb:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 116
+          - 4
+          - 124
+    stype: 0
+    ttype: 0
+  clk:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - -4
+          - 96
+          - 4
+          - 104
+    stype: 0
+    ttype: 0
+  outb:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 356
+          - 156
+          - 364
+          - 164
+    stype: 0
+    ttype: 1
+  out:
+    obj:
+      - 0
+      - layer: 229
+        purpose: 4294967295
+        net: ""
+        bbox:
+          - 356
+          - 56
+          - 364
+          - 64
+    stype: 0
+    ttype: 1
   VDD:
     obj:
       - 0
@@ -33,84 +111,6 @@ terminals:
           - 4
     stype: 2
     ttype: 2
-  clk:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 96
-          - 4
-          - 104
-    stype: 0
-    ttype: 0
-  clkb:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 116
-          - 4
-          - 124
-    stype: 0
-    ttype: 0
-  in:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 56
-          - 4
-          - 64
-    stype: 0
-    ttype: 0
-  inb:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - -4
-          - 156
-          - 4
-          - 164
-    stype: 0
-    ttype: 0
-  out:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 356
-          - 56
-          - 364
-          - 64
-    stype: 0
-    ttype: 1
-  outb:
-    obj:
-      - 0
-      - layer: 229
-        purpose: 4294967295
-        net: ""
-        bbox:
-          - 356
-          - 156
-          - 364
-          - 164
-    stype: 0
-    ttype: 1
 shapes:
   -
     - 7
@@ -671,7 +671,7 @@ shapes:
     - layer: 231
       purpose: 4294967295
       net: ""
-      ang_start: 0
+      ang_start: 0.0000000000000000
       ang_stop: 3.1415926535897931
       bbox:
         - 50
@@ -681,22 +681,22 @@ shapes:
 instances:
   {}
 props:
-  interfaceLastChanged:
-    - 4
-    - time_val: 1646160663
-  partName:
-    - 3
-    - latch_diff
   pin#:
     - 0
     - 8
+  interfaceLastChanged:
+    - 4
+    - time_val: 1646160663
+  vendorName:
+    - 3
+    - ""
+  partName:
+    - 3
+    - latch_diff
   portOrder:
     - 5
     - name: ILList
       bin_val: ("out" "outb" "VDD" "VSS" "clk" "clkb" "in" "inb")
-  vendorName:
-    - 3
-    - ""
 app_defs:
   _dbLastSavedCounter:
     - 0

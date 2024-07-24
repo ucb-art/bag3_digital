@@ -7,240 +7,6 @@ bbox:
   - 668
   - 420
 terminals:
-  VDD:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: iopin
-          view_name: symbolr
-          xform:
-            - -540
-            - 410
-            - R0
-          bbox:
-            - -601
-            - 384
-            - -530
-            - 420
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -565
-            - 410
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 1
-    ttype: 2
-  VSS:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: iopin
-          view_name: symbolr
-          xform:
-            - -540
-            - 390
-            - R0
-          bbox:
-            - -601
-            - 364
-            - -530
-            - 400
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -565
-            - 390
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 2
-    ttype: 2
-  q:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: opin
-          view_name: symbol
-          xform:
-            - -480
-            - 350
-            - R0
-          bbox:
-            - -480
-            - 324
-            - -423
-            - 360
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -455
-            - 350
-          alignment: 1
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 1
-  qb:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: opin
-          view_name: symbol
-          xform:
-            - -480
-            - 330
-            - R0
-          bbox:
-            - -480
-            - 304
-            - -423
-            - 340
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -455
-            - 330
-          alignment: 1
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 1
-  r:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: ipin
-          view_name: symbol
-          xform:
-            - -540
-            - 290
-            - R0
-          bbox:
-            - -597
-            - 264
-            - -540
-            - 300
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -570
-            - 290
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 0
-  rb:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: ipin
-          view_name: symbol
-          xform:
-            - -540
-            - 330
-            - R0
-          bbox:
-            - -597
-            - 304
-            - -540
-            - 340
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -570
-            - 330
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 0
   rsthb:
     obj:
       - 1
@@ -319,6 +85,45 @@ terminals:
           format: 1
     stype: 0
     ttype: 0
+  r:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: ipin
+          view_name: symbol
+          xform:
+            - -540
+            - 290
+            - R0
+          bbox:
+            - -597
+            - 264
+            - -540
+            - 300
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -570
+            - 290
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 0
   s:
     obj:
       - 1
@@ -358,6 +163,123 @@ terminals:
           format: 1
     stype: 0
     ttype: 0
+  qb:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: opin
+          view_name: symbol
+          xform:
+            - -480
+            - 330
+            - R0
+          bbox:
+            - -480
+            - 304
+            - -423
+            - 340
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -455
+            - 330
+          alignment: 1
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 1
+  rb:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: ipin
+          view_name: symbol
+          xform:
+            - -540
+            - 330
+            - R0
+          bbox:
+            - -597
+            - 304
+            - -540
+            - 340
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -570
+            - 330
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 0
+  q:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: opin
+          view_name: symbol
+          xform:
+            - -480
+            - 350
+            - R0
+          bbox:
+            - -480
+            - 324
+            - -423
+            - 360
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -455
+            - 350
+          alignment: 1
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 1
   sb:
     obj:
       - 1
@@ -397,6 +319,84 @@ terminals:
           format: 1
     stype: 0
     ttype: 0
+  VSS:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: iopin
+          view_name: symbolr
+          xform:
+            - -540
+            - 390
+            - R0
+          bbox:
+            - -601
+            - 364
+            - -530
+            - 400
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -565
+            - 390
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 2
+    ttype: 2
+  VDD:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: iopin
+          view_name: symbolr
+          xform:
+            - -540
+            - 410
+            - R0
+          bbox:
+            - -601
+            - 384
+            - -530
+            - 420
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -565
+            - 410
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 1
+    ttype: 2
 shapes:
   -
     - 5
@@ -1523,77 +1523,6 @@ shapes:
           - 560
           - 30
 instances:
-  XNFBN:
-    lib_name: xbase
-    cell_name: nmos4_stack
-    view_name: symbol
-    xform:
-      - 280
-      - -230
-      - MY
-    bbox:
-      - -38
-      - -234
-      - 284
-      - -9
-    connections:
-      b: VSS
-      d: qb
-      g<1:0>: rb,q
-      s: VSS
-    params:
-      {}
-    is_primitive: false
-  XNFBP:
-    lib_name: xbase
-    cell_name: nmos4_stack
-    view_name: symbol
-    xform:
-      - -240
-      - -230
-      - R0
-    bbox:
-      - -244
-      - -234
-      - 78
-      - -9
-    connections:
-      b: VSS
-      d: q
-      g<1:0>: sb,qb
-      s: VSS
-    params:
-      {}
-    is_primitive: false
-  XNRN:
-    lib_name: BAG_prim
-    cell_name: nmos4_standard
-    view_name: symbol
-    xform:
-      - 440
-      - -60
-      - MY
-    bbox:
-      - 308
-      - -94
-      - 508
-      - -15
-    connections:
-      B: VSS
-      D: qb
-      G: s
-      S: VSS
-    params:
-      l:
-        - 3
-        - 40n
-      nf:
-        - 3
-        - 2
-      w:
-        - 3
-        - 4
-    is_primitive: true
   XNRP:
     lib_name: BAG_prim
     cell_name: nmos4_standard
@@ -1608,110 +1537,10 @@ instances:
       - -268
       - -15
     connections:
-      B: VSS
-      D: q
-      G: r
       S: VSS
-    params:
-      l:
-        - 3
-        - 40n
-      nf:
-        - 3
-        - 2
-      w:
-        - 3
-        - 4
-    is_primitive: true
-  XPFBN:
-    lib_name: xbase
-    cell_name: pmos4_stack
-    view_name: symbol
-    xform:
-      - 280
-      - 90
-      - MY
-    bbox:
-      - -38
-      - 86
-      - 284
-      - 301
-    connections:
-      b: VDD
-      d: qb
-      g<1:0>: s,q
-      s: VDD
-    params:
-      {}
-    is_primitive: false
-  XPFBP:
-    lib_name: xbase
-    cell_name: pmos4_stack
-    view_name: symbol
-    xform:
-      - -240
-      - 90
-      - R0
-    bbox:
-      - -244
-      - 86
-      - 78
-      - 301
-    connections:
-      b: VDD
-      d: q
-      g<1:0>: r,qb
-      s: VDD
-    params:
-      {}
-    is_primitive: false
-  XPRN:
-    lib_name: BAG_prim
-    cell_name: pmos4_standard
-    view_name: symbol
-    xform:
-      - 600
-      - 120
-      - MY
-    bbox:
-      - 469
-      - 33
-      - 668
-      - 207
-    connections:
-      B: VDD
-      D: qb
-      G: rstlb
-      S: VDD
-    params:
-      l:
-        - 3
-        - 40n
-      nf:
-        - 3
-        - 2
-      w:
-        - 3
-        - 4
-    is_primitive: true
-  XPRP:
-    lib_name: BAG_prim
-    cell_name: pmos4_standard
-    view_name: symbol
-    xform:
-      - -560
-      - 120
-      - R0
-    bbox:
-      - -628
-      - 33
-      - -429
-      - 207
-    connections:
-      B: VDD
       D: q
-      G: rsthb
-      S: VDD
+      B: VSS
+      G: r
     params:
       l:
         - 3
@@ -1723,24 +1552,24 @@ instances:
         - 3
         - 4
     is_primitive: true
-  XPSN:
+  XNRN:
     lib_name: BAG_prim
-    cell_name: pmos4_standard
+    cell_name: nmos4_standard
     view_name: symbol
     xform:
       - 440
-      - 120
+      - -60
       - MY
     bbox:
-      - 309
-      - 33
+      - 308
+      - -94
       - 508
-      - 207
+      - -15
     connections:
-      B: VDD
+      S: VSS
       D: qb
-      G: rb
-      S: VDD
+      B: VSS
+      G: s
     params:
       l:
         - 3
@@ -1766,10 +1595,10 @@ instances:
       - -269
       - 207
     connections:
-      B: VDD
-      D: q
-      G: sb
       S: VDD
+      D: q
+      B: VDD
+      G: sb
     params:
       l:
         - 3
@@ -1781,16 +1610,178 @@ instances:
         - 3
         - 4
     is_primitive: true
+  XPSN:
+    lib_name: BAG_prim
+    cell_name: pmos4_standard
+    view_name: symbol
+    xform:
+      - 440
+      - 120
+      - MY
+    bbox:
+      - 309
+      - 33
+      - 508
+      - 207
+    connections:
+      S: VDD
+      D: qb
+      B: VDD
+      G: rb
+    params:
+      l:
+        - 3
+        - 40n
+      nf:
+        - 3
+        - 2
+      w:
+        - 3
+        - 4
+    is_primitive: true
+  XPRP:
+    lib_name: BAG_prim
+    cell_name: pmos4_standard
+    view_name: symbol
+    xform:
+      - -560
+      - 120
+      - R0
+    bbox:
+      - -628
+      - 33
+      - -429
+      - 207
+    connections:
+      S: VDD
+      D: q
+      B: VDD
+      G: rsthb
+    params:
+      l:
+        - 3
+        - 40n
+      nf:
+        - 3
+        - 2
+      w:
+        - 3
+        - 4
+    is_primitive: true
+  XPRN:
+    lib_name: BAG_prim
+    cell_name: pmos4_standard
+    view_name: symbol
+    xform:
+      - 600
+      - 120
+      - MY
+    bbox:
+      - 469
+      - 33
+      - 668
+      - 207
+    connections:
+      S: VDD
+      D: qb
+      B: VDD
+      G: rstlb
+    params:
+      l:
+        - 3
+        - 40n
+      nf:
+        - 3
+        - 2
+      w:
+        - 3
+        - 4
+    is_primitive: true
+  XPFBP:
+    lib_name: xbase
+    cell_name: pmos4_stack
+    view_name: symbol
+    xform:
+      - -240
+      - 90
+      - R0
+    bbox:
+      - -244
+      - 86
+      - 78
+      - 301
+    connections:
+      s: VDD
+      g<1:0>: r,qb
+      d: q
+      b: VDD
+    params:
+      {}
+    is_primitive: false
+  XPFBN:
+    lib_name: xbase
+    cell_name: pmos4_stack
+    view_name: symbol
+    xform:
+      - 280
+      - 90
+      - MY
+    bbox:
+      - -38
+      - 86
+      - 284
+      - 301
+    connections:
+      s: VDD
+      g<1:0>: s,q
+      d: qb
+      b: VDD
+    params:
+      {}
+    is_primitive: false
+  XNFBP:
+    lib_name: xbase
+    cell_name: nmos4_stack
+    view_name: symbol
+    xform:
+      - -240
+      - -230
+      - R0
+    bbox:
+      - -244
+      - -234
+      - 78
+      - -9
+    connections:
+      s: VSS
+      g<1:0>: sb,qb
+      d: q
+      b: VSS
+    params:
+      {}
+    is_primitive: false
+  XNFBN:
+    lib_name: xbase
+    cell_name: nmos4_stack
+    view_name: symbol
+    xform:
+      - 280
+      - -230
+      - MY
+    bbox:
+      - -38
+      - -234
+      - 284
+      - -9
+    connections:
+      s: VSS
+      g<1:0>: rb,q
+      d: qb
+      b: VSS
+    params:
+      {}
+    is_primitive: false
 props:
-  connectivityLastUpdated:
-    - 0
-    - 1870
-  lastSchematicExtraction:
-    - 4
-    - time_val: 1614483266
-  net#:
-    - 0
-    - 5
   pin#:
     - 0
     - 10
@@ -1800,9 +1791,18 @@ props:
   schGeometryVersion:
     - 3
     - sch.ds.gm.1.4
+  lastSchematicExtraction:
+    - 4
+    - time_val: 1614483266
+  connectivityLastUpdated:
+    - 0
+    - 1870
   schXtrVersion:
     - 3
     - sch.10.0
+  net#:
+    - 0
+    - 5
 app_defs:
   _dbLastSavedCounter:
     - 0
