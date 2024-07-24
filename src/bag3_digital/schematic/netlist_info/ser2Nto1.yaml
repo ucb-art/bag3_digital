@@ -7,6 +7,240 @@ bbox:
   - 607
   - 260
 terminals:
+  din:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: ipin
+          view_name: symbol
+          xform:
+            - -1180
+            - 90
+            - R0
+          bbox:
+            - -1237
+            - 64
+            - -1180
+            - 100
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -1210
+            - 90
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 0
+  clk:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: ipin
+          view_name: symbol
+          xform:
+            - -1180
+            - 50
+            - R0
+          bbox:
+            - -1237
+            - 24
+            - -1180
+            - 60
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -1210
+            - 50
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 0
+  clkb:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: ipin
+          view_name: symbol
+          xform:
+            - -1180
+            - 10
+            - R0
+          bbox:
+            - -1237
+            - -16
+            - -1180
+            - 20
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -1210
+            - 10
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 0
+  clk_div:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: ipin
+          view_name: symbol
+          xform:
+            - -1180
+            - -30
+            - R0
+          bbox:
+            - -1237
+            - -56
+            - -1180
+            - -20
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -1210
+            - -30
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 0
+  rst:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: ipin
+          view_name: symbol
+          xform:
+            - -1180
+            - -70
+            - R0
+          bbox:
+            - -1237
+            - -96
+            - -1180
+            - -60
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -1210
+            - -70
+          alignment: 7
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 0
+  dout:
+    obj:
+      - 1
+      - inst:
+          lib_name: basic
+          cell_name: opin
+          view_name: symbol
+          xform:
+            - -1040
+            - 90
+            - R0
+          bbox:
+            - -1040
+            - 64
+            - -983
+            - 100
+          connections:
+            {}
+          params:
+            {}
+          is_primitive: true
+        attr:
+          layer: 229
+          purpose: 237
+          net: ""
+          origin:
+            - -1015
+            - 90
+          alignment: 1
+          orient: R0
+          font: 5
+          height: 10
+          overbar: false
+          visible: true
+          drafting: true
+          attr_type: 0
+          format: 1
+    stype: 0
+    ttype: 1
   VDD:
     obj:
       - 1
@@ -85,201 +319,6 @@ terminals:
           format: 1
     stype: 2
     ttype: 2
-  clk:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: ipin
-          view_name: symbol
-          xform:
-            - -1180
-            - 50
-            - R0
-          bbox:
-            - -1237
-            - 24
-            - -1180
-            - 60
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -1210
-            - 50
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 0
-  clk_div:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: ipin
-          view_name: symbol
-          xform:
-            - -1180
-            - -30
-            - R0
-          bbox:
-            - -1237
-            - -56
-            - -1180
-            - -20
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -1210
-            - -30
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 0
-  clkb:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: ipin
-          view_name: symbol
-          xform:
-            - -1180
-            - 10
-            - R0
-          bbox:
-            - -1237
-            - -16
-            - -1180
-            - 20
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -1210
-            - 10
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 0
-  din:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: ipin
-          view_name: symbol
-          xform:
-            - -1180
-            - 90
-            - R0
-          bbox:
-            - -1237
-            - 64
-            - -1180
-            - 100
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -1210
-            - 90
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 0
-  dout:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: opin
-          view_name: symbol
-          xform:
-            - -1040
-            - 90
-            - R0
-          bbox:
-            - -1040
-            - 64
-            - -983
-            - 100
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -1015
-            - 90
-          alignment: 1
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 1
   doutb:
     obj:
       - 1
@@ -319,45 +358,6 @@ terminals:
           format: 1
     stype: 0
     ttype: 1
-  rst:
-    obj:
-      - 1
-      - inst:
-          lib_name: basic
-          cell_name: ipin
-          view_name: symbol
-          xform:
-            - -1180
-            - -70
-            - R0
-          bbox:
-            - -1237
-            - -96
-            - -1180
-            - -60
-          connections:
-            {}
-          params:
-            {}
-          is_primitive: true
-        attr:
-          layer: 229
-          purpose: 237
-          net: ""
-          origin:
-            - -1210
-            - -70
-          alignment: 7
-          orient: R0
-          font: 5
-          height: 10
-          overbar: false
-          visible: true
-          drafting: true
-          attr_type: 0
-          format: 1
-    stype: 0
-    ttype: 0
 shapes:
   -
     - 5
@@ -1175,6 +1175,34 @@ shapes:
       visible: true
       drafting: true
       text: doutb
+  -
+    - 5
+    - layer: 228
+      purpose: 4294967295
+      net: NC
+      points:
+        -
+          - -40
+          - -60
+        -
+          - 0
+          - -60
+  -
+    - 7
+    - layer: 228
+      purpose: 237
+      net: NC
+      origin:
+        - -4
+        - -53
+      alignment: 8
+      orient: R0
+      font: 5
+      height: 10
+      overbar: false
+      visible: true
+      drafting: true
+      text: NC
 instances:
   XCS:
     lib_name: xbase
@@ -1190,53 +1218,9 @@ instances:
       - 358
       - 56
     connections:
-      in<1:0>: tinv_out<1:0>
+      NC: NC
       out: dout
-    params:
-      {}
-    is_primitive: false
-  XINV:
-    lib_name: bag3_digital
-    cell_name: inv
-    view_name: symbol
-    xform:
-      - 360
-      - -100
-      - R0
-    bbox:
-      - 356
-      - -104
-      - 564
-      - 64
-    connections:
-      VDD: VDD
-      VSS: VSS
-      in: dout
-      out: doutb
-    params:
-      {}
-    is_primitive: false
-  XSER0:
-    lib_name: bag3_digital
-    cell_name: serNto1
-    view_name: symbol
-    xform:
-      - -720
-      - -360
-      - R0
-    bbox:
-      - -724
-      - -364
-      - -416
-      - -116
-    connections:
-      VDD: VDD
-      VSS: VSS
-      clk: clk
-      clk_div: clk_div
-      din: din
-      doutb: ser_outb<0>
-      rst: rst
+      in<1:0>: tinv_out<1:0>
     params:
       {}
     is_primitive: false
@@ -1254,36 +1238,37 @@ instances:
       - -416
       - 224
     connections:
-      VDD: VDD
       VSS: VSS
+      VDD: VDD
+      doutb: ser_outb<1>
       clk: clkb
       clk_div: clk_div
       din: din
-      doutb: ser_outb<1>
       rst: rst
     params:
       {}
     is_primitive: false
-  XTINV0:
+  XSER0:
     lib_name: bag3_digital
-    cell_name: inv_tristate
+    cell_name: serNto1
     view_name: symbol
     xform:
-      - -290
-      - -280
+      - -720
+      - -360
       - R0
     bbox:
-      - -294
-      - -284
-      - -86
+      - -724
+      - -364
+      - -416
       - -116
     connections:
-      VDD: VDD
       VSS: VSS
-      en: clkb
-      enb: clk
-      in: ser_outb<0>
-      out: tinv_out<0>
+      VDD: VDD
+      doutb: ser_outb<0>
+      clk: clk
+      clk_div: clk_div
+      din: din
+      rst: rst
     params:
       {}
     is_primitive: false
@@ -1301,47 +1286,91 @@ instances:
       - -86
       - 224
     connections:
-      VDD: VDD
       VSS: VSS
+      VDD: VDD
+      out: tinv_out<1>
       en: clk
       enb: clkb
       in: ser_outb<1>
-      out: tinv_out<1>
+    params:
+      {}
+    is_primitive: false
+  XTINV0:
+    lib_name: bag3_digital
+    cell_name: inv_tristate
+    view_name: symbol
+    xform:
+      - -290
+      - -280
+      - R0
+    bbox:
+      - -294
+      - -284
+      - -86
+      - -116
+    connections:
+      VSS: VSS
+      VDD: VDD
+      out: tinv_out<0>
+      en: clkb
+      enb: clk
+      in: ser_outb<0>
+    params:
+      {}
+    is_primitive: false
+  XINV:
+    lib_name: bag3_digital
+    cell_name: inv
+    view_name: symbol
+    xform:
+      - 360
+      - -100
+      - R0
+    bbox:
+      - 356
+      - -104
+      - 564
+      - 64
+    connections:
+      VSS: VSS
+      VDD: VDD
+      out: doutb
+      in: dout
     params:
       {}
     is_primitive: false
 props:
-  connectivityLastUpdated:
-    - 0
-    - 3894
   instance#:
     - 0
     - 2
-  lastSchematicExtraction:
-    - 4
-    - time_val: 1627494324
-  net#:
-    - 0
-    - 0
   pin#:
     - 0
     - 9
   schGeometryLastUpdated:
     - 0
-    - 3894
+    - 3942
   schGeometryVersion:
     - 3
     - sch.ds.gm.1.4
+  lastSchematicExtraction:
+    - 4
+    - time_val: 1721858668
+  connectivityLastUpdated:
+    - 0
+    - 3942
+  net#:
+    - 0
+    - 0
   schXtrVersion:
     - 3
     - sch.10.0
 app_defs:
   _dbLastSavedCounter:
     - 0
-    - 3894
+    - 3942
   _dbvCvTimeStamp:
     - 0
-    - 3894
+    - 3942
   cdbRevision:
     - 0
     - 227612
