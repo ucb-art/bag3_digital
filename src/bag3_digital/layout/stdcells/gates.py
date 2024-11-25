@@ -96,6 +96,9 @@ class InvCore(MOSBase):
             vertical_out='True to draw output on vertical metal layer.',
             vertical_sup='True to have supply unconnected on conn_layer.',
             vertical_in='False to not draw the vertical input wire when is_guarded = True.',
+            has_vtop='True if PMOS source is connected to VTOP instead of VDD; False by default',
+            has_vbot='True if NMOS source is connected to VBOT instead of VSS; False by default',
+            separate_out='True to separate pmos and nmos outputs; False by default.',
         )
 
     @classmethod
@@ -115,6 +118,9 @@ class InvCore(MOSBase):
             vertical_out=True,
             vertical_sup=False,
             vertical_in=True,
+            has_vtop=False,
+            has_vbot=False,
+            separate_out=False,
         )
 
     def draw_layout(self) -> None:
@@ -137,6 +143,9 @@ class InvCore(MOSBase):
         vertical_out: bool = self.params['vertical_out']
         vertical_sup: bool = self.params['vertical_sup']
         vertical_in: bool = self.params['vertical_in']
+        has_vtop: bool = self.params['has_vtop']
+        has_vbot: bool = self.params['has_vbot']
+        separate_out: bool = self.params['separate_out']
 
         if seg_p <= 0:
             seg_p = seg
@@ -166,9 +175,9 @@ class InvCore(MOSBase):
         tr_w_h = tr_manager.get_width(hm_layer, 'sig')
         tr_w_v = tr_manager.get_width(vm_layer, 'sig')
         nout_tidx = sig_locs.get('nout', self.get_track_index(ridx_n, MOSWireType.DS_GATE,
-                                                              wire_name='sig', wire_idx=0))
-        pout_tidx = sig_locs.get('pout', self.get_track_index(ridx_p, MOSWireType.DS_GATE,
                                                               wire_name='sig', wire_idx=-1))
+        pout_tidx = sig_locs.get('pout', self.get_track_index(ridx_p, MOSWireType.DS_GATE,
+                                                              wire_name='sig', wire_idx=0))
         nout_tid = TrackID(hm_layer, nout_tidx, tr_w_h)
         pout_tid = TrackID(hm_layer, pout_tidx, tr_w_h)
 
@@ -179,9 +188,14 @@ class InvCore(MOSBase):
             vm_tidx = sig_locs.get('out', grid.coord_to_track(vm_layer, pout.middle,
                                                               mode=RoundMode.NEAREST))
             vm_tid = TrackID(vm_layer, vm_tidx, width=tr_w_v)
-            self.add_pin('out', self.connect_to_tracks([pout, nout], vm_tid))
+            if separate_out:
+                pout = self.connect_to_tracks(pout, vm_tid, min_len_mode=MinLenMode.MIDDLE)
+                nout = self.connect_to_tracks(nout, vm_tid, min_len_mode=MinLenMode.MIDDLE)
+            else:
+                self.add_pin('out', self.connect_to_tracks([pout, nout], vm_tid))
         else:
-            self.add_pin('out', [pout, nout], connect=True)
+            if not separate_out:
+                self.add_pin('out', [pout, nout], connect=True)
             vm_tidx = None
 
         if is_guarded:
@@ -222,20 +236,28 @@ class InvCore(MOSBase):
             self.add_pin('pin', in_warr, hide=True)
             self.add_pin('nin', in_warr, hide=True)
 
-        self.add_pin(f'pout', pout, hide=True)
-        self.add_pin(f'nout', nout, hide=True)
+        self.add_pin(f'pout', pout, hide=not separate_out)
+        self.add_pin(f'nout', nout, hide=not separate_out)
 
         xr = self.bound_box.xh
+        ps_name = 'VTOP' if has_vtop else 'VDD'
+        ns_name = 'VBOT' if has_vbot else 'VSS'
         if vertical_sup:
-            self.add_pin('VDD', pports.s, connect=True)
-            self.add_pin('VSS', nports.s, connect=True)
+            self.add_pin(ps_name, pports.s, connect=True)
+            self.add_pin(ns_name, nports.s, connect=True)
         else:
-            ns_tid = self.get_track_id(ridx_n, False, wire_name='sup')
-            ps_tid = self.get_track_id(ridx_p, True, wire_name='sup')
-            vss = self.connect_to_tracks(nports.s, ns_tid, track_lower=0, track_upper=xr)
-            vdd = self.connect_to_tracks(pports.s, ps_tid, track_lower=0, track_upper=xr)
-            self.add_pin('VDD', vdd)
-            self.add_pin('VSS', vss)
+            if has_vbot:
+                ns_tid = self.get_track_id(ridx_n, False, wire_name='sig', wire_idx=-2)
+            else:
+                ns_tid = self.get_track_id(ridx_n, False, wire_name='sup')
+            if has_vtop:
+                ps_tid = self.get_track_id(ridx_p, True, wire_name='sig', wire_idx=1)
+            else:
+                ps_tid = self.get_track_id(ridx_p, True, wire_name='sup')
+            ns_hm = self.connect_to_tracks(nports.s, ns_tid, track_lower=0, track_upper=xr)
+            ps_hm = self.connect_to_tracks(pports.s, ps_tid, track_lower=0, track_upper=xr)
+            self.add_pin(ps_name, ps_hm)
+            self.add_pin(ns_name, ns_hm)
 
         default_wp = self.place_info.get_row_place_info(ridx_p).row_info.width
         default_wn = self.place_info.get_row_place_info(ridx_n).row_info.width
@@ -252,6 +274,9 @@ class InvCore(MOSBase):
             th_p=thp,
             stack_p=stack_p,
             stack_n=stack_n,
+            has_vtop=has_vtop,
+            has_vbot=has_vbot,
+            separate_out=separate_out,
         )
 
 

@@ -24,6 +24,7 @@ from pybag.enum import LogLevel
 from bag.io.file import read_yaml
 from bag.simulation.base import get_corner_temp
 from bag.core import BagProject
+from bag.concurrent.core import batch_async_task
 
 from bag3_liberty.enum import LogicType, TermType, LUTType
 from bag3_liberty.data import Library, Cell, parse_cdba_name, get_bus_bit_name
@@ -85,19 +86,47 @@ async def async_generate_liberty(prj: BagProject, lib_config: Mapping[str, Any],
     log_level : LogLevel
         stdout logging level.
     """
-    gen_specs_file: str = cell_specs['gen_specs_file']
+    gen_specs_file: str = cell_specs.get('gen_specs_file', '')
+    if gen_specs_file:
+        gen_specs: Mapping[str, Any] = read_yaml(gen_specs_file)
+        params_key = 'params'
+    else:
+        gen_specs = cell_specs
+        params_key = ''
+    static_info: str = cell_specs.get('static_info', '')
+    if static_info:
+        use_netlist: Optional[str] = cell_specs.get('use_netlist')
+        if use_netlist is None and not extract:
+            raise ValueError('Since DUT is static, please either provide a schematic or extracted netlist, or '
+                             'use "-x" to extract the DUT from the Virtuoso library.')
+        dut_specs = dict(
+            static_info=static_info,
+            use_netlist=use_netlist,
+        )
+        cvinfo = read_yaml(static_info)
+        impl_cell = cvinfo['cell_name']
+    else:
+        if 'dut_class' not in gen_specs and 'lay_class' not in gen_specs:
+            dut_specs = {}
+            impl_cell = ''
+        else:
+            impl_cell = gen_specs['impl_cell']
+            dut_specs = dict(
+                impl_cell=impl_cell,
+                dut_cls=gen_specs.get('dut_class') or gen_specs['lay_class'],
+                dut_params=gen_specs[params_key],
+                extract=extract,
+                export_lay=export_lay,
+                name_prefix=gen_specs.get('name_prefix', ''),
+                name_suffix=gen_specs.get('name_suffix', ''),
+            )
+
     scenario: str = cell_specs.get('scenario', '')
 
-    gen_specs: Mapping[str, Any] = read_yaml(gen_specs_file)
     impl_lib: str = gen_specs['impl_lib']
-    impl_cell: str = gen_specs['impl_cell']
-    dut_cls: str = gen_specs.get('dut_class', gen_specs.get('lay_class', ''))
-    dut_params: Optional[Mapping[str, Any]] = gen_specs.get('params', None)
-    name_prefix: str = gen_specs.get('name_prefix', '')
-    name_suffix: str = gen_specs.get('name_suffix', '')
     gen_root_dir: Path = Path(gen_specs['root_dir'])
     lib_root_dir = gen_root_dir / 'lib_gen'
-
+    rcx_params: Optional[Mapping[str, Any]] = cell_specs.get('rcx_params', None)
     sim_precision: int = sim_config['precision']
 
     dsn_options = dict(
@@ -110,9 +139,9 @@ async def async_generate_liberty(prj: BagProject, lib_config: Mapping[str, Any],
     log_file = str(lib_root_dir / 'lib_gen.log')
     sim_db = prj.make_sim_db(lib_root_dir / 'dsn', log_file, impl_lib, dsn_options=dsn_options,
                              force_sim=force_sim, precision=sim_precision, log_level=log_level)
-    if dut_cls and dut_params is not None:
-        dut = await sim_db.async_new_design(impl_cell, dut_cls, dut_params, export_lay=export_lay,
-                                            name_prefix=name_prefix, name_suffix=name_suffix)
+    if dut_specs:
+        inst_list = await sim_db.async_batch_design([dut_specs], rcx_params)
+        dut = inst_list[0]
     else:
         dut = None
 
@@ -336,6 +365,8 @@ def _get_pin_info_list(src_list: Sequence[Mapping[str, Any]], defaults: Mapping[
             bus_defaults: Dict[str, Any] = pin_info.get('defaults', empty_dict)
 
             cur_defaults = default_dict.copy()
+            cur_defaults.update(pin_info)
+            cur_defaults.pop('name')
             cur_defaults.update(bus_defaults)
             if 'reset_val' not in cur_defaults:
                 cur_defaults['reset_val'] = None

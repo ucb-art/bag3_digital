@@ -147,7 +147,7 @@ class LibertyCharMM(MeasurementManager):
         else:
             in_bit_names = []
             out_io_pins = []
-            for pin_name, term_type in dut.sch_master.pins.items():
+            for pin_name, term_type in dut.pins.items():
                 basename, bus_range = parse_cdba_name(pin_name)
                 if bus_range is None:
                     if term_type is TermType.input:

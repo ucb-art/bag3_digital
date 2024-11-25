@@ -42,20 +42,28 @@ class bag3_digital__mux2to1_matched(Module):
     @classmethod
     def get_params_info(cls) -> Mapping[str, str]:
         return dict(
-            inv_params='Output inverter parameters',
+            inv_params='Output inverter parameters (optional)',
             tri_params='Tristate inverter parameters',
-            sel_params='Select inverter params',
+            sel_params='Select inverter params (optional)',
+            out_invert='True to have inverted output; False by default',
         )
 
     @classmethod
     def get_default_param_values(cls) -> Mapping[str, Any]:
         return dict(
+            inv_params=None,
             sel_params=None,
+            out_invert=False,
         )
 
-    def design(self, inv_params: Param, tri_params: Param, sel_params: Optional[Param]) -> None:
+    def design(self, inv_params: Optional[Param], tri_params: Param, sel_params: Optional[Param], out_invert: bool
+               ) -> None:
         self.instances['XPASS<1:0>'].design(**tri_params)
-        self.instances['XBUF'].design(**inv_params)
+        if out_invert:
+            self.remove_instance('XBUF')
+            self.rename_pin('out', 'outb')
+        else:
+            self.instances['XBUF'].design(**inv_params)
         self.instances['XSUM'].design(nin=2)
 
         if sel_params:
